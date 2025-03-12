@@ -1,6 +1,6 @@
 # Bash Coding Standards
 
-## General Guidelines
+## General
 - Use **Bash** (`#!/bin/bash`) for shell scripts. Avoid other shells unless necessary, unless required by legacy systems.
 - Scripts should be **short and simple**; if a script exceeds 100 lines or involves complex logic, consider another language such as Python or Go.
 - **Use `set -e`** to ensure scripts exit on error. Also, consider `set -u` to treat unset variables as errors, and `set -o pipefail` to catch failures in pipelines.
