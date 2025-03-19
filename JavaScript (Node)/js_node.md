@@ -1,5 +1,8 @@
 # JavaScript (Node) Coding Standards
 
+This document outlines key practices for writing clean and efficient JavaScript code for Node applications.
+
+It is based on the [Standard JS guide](https://standardjs.com/).
 
 ## Why Use JavaScript Standard Style?
 JavaScript Standard Style is designed to streamline development by enforcing a unified style guide with minimal setup. It helps developers write consistent, clean code while avoiding unnecessary debates over formatting preferences.
