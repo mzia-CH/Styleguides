@@ -1,5 +1,11 @@
 # Bash Coding Standards
 
+This document outlines key practices for writing clean and efficient Bash code. 
+
+It is based on the [Google shell coding standard](https://google.github.io/styleguide/shell.xml)
+with the **exception of using four spaces** (not two as
+[specified in the standard](https://google.github.io/styleguide/shellguide.html#indentation)).
+
 ## General
 - Use **Bash** (`#!/bin/bash`) for shell scripts. Avoid other shells unless necessary, unless required by legacy systems.
 - Scripts should be **short and simple**; if a script exceeds 100 lines or involves complex logic, consider another language such as Python or Go.
