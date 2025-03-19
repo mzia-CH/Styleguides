@@ -1,6 +1,6 @@
 # Go Coding Standards
 
-This document outlines key practices for writing clean, efficient and idiomatic Go code. 
+This document outlines key practices for writing clean and efficient Go code. 
 
 It is based on the [effective go guide](https://go.dev/doc/effective_go), with some notable exceptions.
 
