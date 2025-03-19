@@ -1,6 +1,6 @@
 # Java Coding Standards
 
-This document outlines key practices for writing clean, efficient and idiomatic Java code. It is based on the comprehensive [Google Java Style guide](https://google.github.io/styleguide/javaguide.html), with some notable exceptions.
+This document outlines key practices for writing clean and efficient Java code. It is based on the comprehensive [Google Java Style guide](https://google.github.io/styleguide/javaguide.html), with some notable exceptions.
 
 ## 1. Source File Basics
 
