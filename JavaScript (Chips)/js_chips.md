@@ -109,7 +109,4 @@ page.handleBodyLoad = myPage.handleBodyLoad;
 - **Optimize Performance**: Minimize unnecessary computations.
 - **Consistent Code Reviews**.
 
-Example:
-```js
-const message = `Hello, ${user.name}!`;
-```
+
