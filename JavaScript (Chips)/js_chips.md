@@ -61,11 +61,11 @@ function calculateArea(width, height) {
 - **Blank Lines**:
   - Separate logical sections with a blank line.
   - Place blank lines between class members.
-- **File Structure**: Organize files into meaningful directories and use clear file names.
+- **File Structure**: Organise files into meaningful directories and use clear file names.
 - **Imports**: Order imports logically.
 
 ## Global Scope and Variables
-- **Minimize Global Methods and Objects**: To avoid name clashes, minimize global variables and instead create classes or object literals:
+- **Minimise Global Methods and Objects**: To avoid name clashes, minimise global variables and instead create classes or object literals:
 ```js
 function StringUtil() { ... }
 StringUtil.CHIPS_DATA_FORMAT = "dd/mm/yy";
@@ -106,7 +106,7 @@ page.handleBodyLoad = myPage.handleBodyLoad;
 - **Avoid Deep Nesting**: Keep functions and conditionals shallow.
 - **Use Meaningful Variable Names**.
 - **Handle Errors Properly**: Use `try...catch` where necessary.
-- **Optimize Performance**: Minimize unnecessary computations.
+- **Optimise Performance**: Minimise unnecessary computations.
 - **Consistent Code Reviews**.
 
 
