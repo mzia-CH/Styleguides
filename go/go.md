@@ -8,7 +8,7 @@ It is based on the [effective go guide](https://go.dev/doc/effective_go), with s
 
 ### Use `gofmt`
 - Always format code using `gofmt` (or `go fmt` for package-level formatting).
-- `gofmt` standardizes indentation, alignment, and spacing.
+- `gofmt` standardises indentation, alignment, and spacing.
 - Indentation uses **tabs**, not spaces.
 - All Go code in the standard library is formatted using `gofmt`, so following this ensures consistency with the broader ecosystem.
 - If integrating with CI/CD pipelines, configure automatic `gofmt` checks to enforce consistent formatting.
