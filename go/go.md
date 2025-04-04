@@ -8,7 +8,7 @@ It is based on the [effective go guide](https://go.dev/doc/effective_go), with s
 
 ### Use `gofmt`
 - Always format code using `gofmt` (or `go fmt` for package-level formatting).
-- `gofmt` standardises indentation, alignment, and spacing.
+- `gofmt` standardises indentation, alignment and spacing.
 - Indentation uses **tabs**, not spaces.
 - All Go code in the standard library is formatted using `gofmt`, so following this ensures consistency with the broader ecosystem.
 - If integrating with CI/CD pipelines, configure automatic `gofmt` checks to enforce consistent formatting.
@@ -38,7 +38,7 @@ Disqualifications []Disqualification `bson:"disqualifications" json:"disqualific
 ### Comments
 - Use `//` for line comments; `/* */` only for package-level documentation.
 - Avoid repeating type or name in comments.
-- Document all exported functions, methods, and structs.
+- Document all exported functions, methods and structs.
 - Use comments to explain why a piece of code exists, not just what it does.
 - Keep comments concise but informative.
 - Use `godoc`-friendly comments to generate documentation from your code.
@@ -48,10 +48,10 @@ Disqualifications []Disqualification `bson:"disqualifications" json:"disqualific
 
 - Go forces your directory structure under your GOPATH. Do not modify this structure, but you can place your GOPATH wherever is convenient.
 - Recommended tools:
-  - **Atom** with `go-plus` for `gofmt`, `go imports`, `go vet`, and `golint` (<https://atom.io/packages/go-plus>).
+  - **Atom** with `go-plus` for `gofmt`, `go imports`, `go vet` and `golint` (<https://atom.io/packages/go-plus>).
   - **JetBrains Go IDE** (part of IntelliJ, includes remote debugging) (<https://www.jetbrains.com/go/>).
   - **vim-go** plugin for Vim users.
-- If not using Atom, ensure `golint`, `go vet`, and similar tools run regularly.
+- If not using Atom, ensure `golint`, `go vet` and similar tools run regularly.
 - `golangci-lint` is useful for local linting (<https://github.com/golangci/golangci-lint>).
 - Follow `gofmt` best practices (<https://blog.golang.org/go-fmt-your-code>).
 
