@@ -77,7 +77,7 @@ Before committing code or requesting a review, ensure the following:
 - (JDK 7+) Use try-with-resources where applicable. (JDK < 7) Ensure resources are explicitly closed.
 
 ### 3.4 Thread Safety
-- Static (global) variables are properly synchronized.
+- Static (global) variables are properly synchronised.
 - Objects accessed by multiple threads use appropriate locks.
 - Locks are acquired and released in the correct order to prevent deadlocks, including error-handling scenarios.
 
