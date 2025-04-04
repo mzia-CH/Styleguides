@@ -48,7 +48,7 @@ Before committing code or requesting a review, ensure the following:
 
 ### 3.1 General Code Quality
 - Method and class names are simple and self-explanatory.
-- Class, variable, and method modifiers are correctly assigned.
+- Class, variable and method modifiers are correctly assigned.
 - Class and method sizes are appropriate.
 - Complex algorithms are well-documented with references.
 - Units of measurement for numeric values are documented.
@@ -61,7 +61,7 @@ Before committing code or requesting a review, ensure the following:
 - Unit tests cover each code path, including error conditions and invalid parameters.
 - Standard algorithms are tested against expected results.
 - Edge cases and corner cases are explicitly tested.
-- Code fixes have corresponding unit tests, and issue numbers are referenced in documentation.
+- Code fixes have corresponding unit tests and issue numbers are referenced in documentation.
 - Arrays and collections are checked for index bounds before access.
 - Code does not reimplement existing functionality available in public frameworks.
 
