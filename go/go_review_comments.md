@@ -8,7 +8,7 @@ This document outlines key practices for writing clean, efficient, and idiomatic
 
 **Gofmt and Imports**
 - Use `gofmt` or `goimports` to automatically format your code.
-- Organize imports in groups: standard library first, then third-party packages.
+- Organise imports in groups: standard library first, then third-party packages.
 
 **Naming Conventions**
 - Use MixedCaps for names. Avoid underscores.
