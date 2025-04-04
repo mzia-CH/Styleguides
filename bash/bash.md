@@ -33,7 +33,7 @@ with the **exception of using four spaces** (not two as
 - Executables should **omit the `.sh` extension** unless required for build systems or packaging.
 - **Libraries must have a `.sh` extension** and should not be executable to prevent unintended execution.
 - **Start scripts with a hashbang (`#!/bin/bash`) and avoid `#!/usr/bin/env bash`** to ensure consistency in script execution.
-- **Organize scripts properly:**
+- **Organise scripts properly:**
   - Place constants and environment variables at the top.
   - Keep all functions together below constants, maintaining modularity and readability.
   - The `main` function should be at the bottom, with `main "$@"` as the last line.
