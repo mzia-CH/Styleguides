@@ -4,17 +4,17 @@
 ## Formatting and Indentation
 - **Indentation**: Use **four spaces** per indentation level instead of two. This ensures that code remains readable across different environments and prevents inconsistencies due to tab characters.
 - **Switch Statements**: Indentation within a `switch` statement follows the four-space rule, meaning that each `case` label is indented accordingly, making it easier to scan through switch statements.
-- **Line Wrapping**: When breaking long lines, continuation lines should be **indented by eight spaces** instead of four. This applies to function arguments, chained method calls, and object properties that span multiple lines.
-- **Curly Braces**: Use mandatory curly braces `{}` for `if`, `for`, and `while` statements, even if the block contains a single statement. This improves clarity and prevents issues arising from implicit scoping.
+- **Line Wrapping**: When breaking long lines, continuation lines should be **indented by eight spaces** instead of four. This applies to function arguments, chained method calls and object properties that span multiple lines.
+- **Curly Braces**: Use mandatory curly braces `{}` for `if`, `for` and `while` statements, even if the block contains a single statement. This improves clarity and prevents issues arising from implicit scoping.
 - **Semicolons**: Terminate every statement with a semicolon (`;`), even though JavaScript allows omitting them. This helps avoid potential pitfalls related to automatic semicolon insertion (ASI) that can cause unintended errors.
-- **Whitespace**: Use spaces around operators, after commas, and before curly braces to enhance readability.
+- **Whitespace**: Use spaces around operators, after commas and before curly braces to enhance readability.
 
 ## Naming Conventions
-Consistent naming conventions improve code clarity and make it easier to understand the purpose of variables, functions, and classes.
+Consistent naming conventions improve code clarity and make it easier to understand the purpose of variables, functions and classes.
 - **File Names**: JavaScript files should start with a lowercase letter and indicate the functionality they provide. For example:
   - `table.js` - contains the classes `Table` and `Row`
   - `query-handling.js` - contains functionality specific to query handling.
-- **Variables and Methods**: Use `lowerCamelCase`. This applies to function names, object properties, and local variables (e.g., `calculateTotal`, `userInfo`).
+- **Variables and Methods**: Use `lowerCamelCase`. This applies to function names, object properties and local variables (e.g., `calculateTotal`, `userInfo`).
 - **Classes**: Use `UpperCamelCase`. Class names should be nouns or noun phrases (e.g., `UserAccount`, `PaymentProcessor`).
 - **Constants**: Use `UPPER_SNAKE_CASE` for immutable values (e.g., `const MAX_SIZE = 100;`).
 - **Booleans**: Use prefixes like `is`, `has`, or `should` for boolean variables (e.g., `isActive`, `hasPermission`).
