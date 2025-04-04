@@ -6,7 +6,7 @@ It is based on the [official perlpod docs](https://perldoc.perl.org/perlpod).
 
 ### 1.1 **Why Use Pod?**
 `Pod` is a simple-to-use markup language specifically designed for Perl documentation. It offers:
-- **Ease of Formatting:** Convert to plain text, HTML, man pages, and more.
+- **Ease of Formatting:** Convert to plain text, HTML, man pages and more.
 - **Consistency:** Standard structure makes it easier to write and read.
 - **Integration:** Embed directly into Perl modules and scripts, keeping documentation close to the code.
 - **Portability:** `Pod`-formatted documentation can be transformed into multiple formats, making it easy to distribute.
@@ -21,7 +21,7 @@ Pod documents consist of three main paragraph types:
 
 - **Ordinary Paragraphs:** Regular text blocks with minimal formatting.
 - **Verbatim Paragraphs:** Pre-formatted blocks (code snippets) using leading whitespace.
-- **Command Paragraphs:** Special commands for headings, lists, and formatting.
+- **Command Paragraphs:** Special commands for headings, lists and formatting.
 
 ### 2.2 **Pod Commands and Syntax**
 Use the following commands to structure your documentation clearly and consistently:
@@ -36,7 +36,7 @@ Use headings to organise the documentation hierarchy and improve readability.
 ✅ **Tip:** `=head1` is the highest-level heading; use `=head2`, `=head3`, etc., for subsections. Use consistent casing and formatting for readability.
 
 ### 2.4 **Lists**
-Create bullet-point or numbered lists using `=over`, `=item`, and `=back` commands.
+Create bullet-point or numbered lists using `=over`, `=item` and `=back` commands.
 
 **Example:**
 ```perl
@@ -109,10 +109,10 @@ Document the key methods with parameters and return values.
 =head1 AUTHOR
 Your Name <email@domain.com>
 ```
-✅ Always include `NAME`, `SYNOPSIS`, and `DESCRIPTION` sections for consistency and readability.
+✅ Always include `NAME`, `SYNOPSIS` and `DESCRIPTION` sections for consistency and readability.
 
 ### 3.2 **Consistent Formatting and Style**
-- Use `=head1` for main sections, `=head2` for subsections, and `=head3` for minor subsections.
+- Use `=head1` for main sections, `=head2` for subsections and `=head3` for minor subsections.
 - Separate paragraphs with a blank line for clarity.
 - Use consistent indentation for verbatim blocks.
 - Use `=cut` to end Pod blocks cleanly.
@@ -186,7 +186,7 @@ use Module; # Missing context and explanation
 ```
 
 ### 5.2 **Descriptive Method Documentation**
-Clearly describe method behavior, parameters, and return values for better clarity.
+Clearly describe method behavior, parameters and return values for better clarity.
 
 ✅ Example:
 ```perl
@@ -225,13 +225,13 @@ Use `podchecker` to validate Pod syntax and catch errors.
 ```bash
 podchecker yourfile.pod
 ```
-✅ Check for missing blank lines, invalid commands, and unrecognised formatting codes.
+✅ Check for missing blank lines, invalid commands and unrecognised formatting codes.
 
 ---
 
 ## 7. Staying Consistent
-Following these Pod standards ensures your Perl documentation is clear, consistent, and easy to maintain. Always:
-- Use proper headings, lists, and formatting codes.
+Following these Pod standards ensures your Perl documentation is clear, consistent and easy to maintain. Always:
+- Use proper headings, lists and formatting codes.
 - Embed documentation in modules and scripts.
 - Validate with `podchecker` to catch errors.
 
