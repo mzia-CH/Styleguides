@@ -16,7 +16,7 @@ This document outlines key practices for writing clean and efficient Java code. 
 
 1. License or copyright (if present)
 2. Package statement (must be the first non-comment statement)
-3. Import statements (no wildcards, sorted ASCII-betically, grouped by standard library, third-party, and project imports)
+3. Import statements (no wildcards, sorted ASCII-betically, grouped by standard library, third-party and project imports)
 4. Exactly one top-level class per file
 5. Blank lines separate logical sections
 
@@ -36,7 +36,7 @@ public class MyClass {
 
 ### 3.1 Braces
 
-- Always used for `if`, `else`, `for`, `do`, and `while` statements, even for single statements.
+- Always used for `if`, `else`, `for`, `do` and `while` statements, even for single statements.
 - Follow **Kernighan & Ritchie** style:
   - No line break before opening `{`
   - Line break after opening `{` and before closing `}`
@@ -81,7 +81,7 @@ switch (value) {
 
 #### **Breaking at Operators**  
 - **Break before** non-assignment operators:  
-  - Dot separator (`.`), method reference (`::`), ampersand in type bounds (`<T extends Foo & Bar>`), and pipes in multi-catch (`catch (FooException | BarException e)`).  
+  - Dot separator (`.`), method reference (`::`), ampersand in type bounds (`<T extends Foo & Bar>`) and pipes in multi-catch (`catch (FooException | BarException e)`).  
 
 #### **Breaking at Assignment Operators**  
 - **Break after** an assignment operator (`=`), though either way is acceptable.  
@@ -118,7 +118,7 @@ Predicate<String> predicate = str ->
   - Between logical sections of code
 - **Horizontal whitespace**:
   - Space before `{`
-  - Space after commas, semicolons, and type declarations
+  - Space after commas, semicolons and type declarations
   - Space around binary and ternary operators
   - No trailing whitespace at the end of lines
 
@@ -163,7 +163,7 @@ Predicate<String> predicate = str ->
 
 ### 5.4 Collections and Generics
 
-- Prefer `ImmutableList`, `ImmutableSet`, and `ImmutableMap` where applicable.
+- Prefer `ImmutableList`, `ImmutableSet` and `ImmutableMap` where applicable.
 - Use generics to enforce type safety (`List<String>` instead of `List`).
 
 ## 6. Javadoc
