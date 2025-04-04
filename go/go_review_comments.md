@@ -2,7 +2,7 @@
 
 ## Go Coding Review Comments
 
-This document outlines key practices for writing clean, efficient, and idiomatic Go code. It is based on the comprehensive [Go Code Review Comments guide](https://go.dev/wiki/CodeReviewComments).
+This document outlines key practices for writing clean, efficient and idiomatic Go code. It is based on the comprehensive [Go Code Review Comments guide](https://go.dev/wiki/CodeReviewComments).
 
 ### Code Formatting and Style
 
@@ -74,7 +74,7 @@ if err != nil {
 - For "main" packages, the comment should describe the program's purpose.
 
 **Package Names**
-- Choose package names that are concise, clear, and avoid redundancy.
+- Choose package names that are concise, clear and avoid redundancy.
 - Avoid generic names like "util" or "common".
 
 **Pass Values**
@@ -89,5 +89,5 @@ if err != nil {
 - Include relevant information in error messages.
 
 **Variable Names**
-- Use short variable names for short scopes, and longer names for broader scopes.
+- Use short variable names for short scopes and longer names for broader scopes.
 - The larger the scope, the more descriptive the name should be.
