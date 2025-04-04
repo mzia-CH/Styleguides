@@ -162,3 +162,77 @@ sub new {
 }
 ```
 ✅ Use `=cut` to return to the Perl code after documentation blocks.
+
+---
+
+## 5. Examples and Best Practices
+
+### 5.1 **Consistent Code Examples**
+Use clear, complete code snippets with context to ensure readability.
+
+✅ **Good example:**
+```perl
+=head2 Using the Module
+
+Example usage:
+
+    use My::Module;
+    my $obj = My::Module->new();
+```
+
+❌ **Bad example:**
+```perl
+use Module; # Missing context and explanation
+```
+
+### 5.2 **Descriptive Method Documentation**
+Clearly describe method behavior, parameters, and return values for better clarity.
+
+✅ Example:
+```perl
+=head2 add_numbers($a, $b)
+
+Adds two numbers and returns the sum.
+
+Parameters:
+    $a - First number
+    $b - Second number
+
+Returns:
+    Sum of $a and $b.
+```
+
+### 5.3 **Private Methods**
+Use `##` comments for private methods and include `@param` and `@returns` tags for consistency.
+
+✅ Example:
+```perl
+## [void] _myPrivateMethod($param1)
+#
+#   @param  param1   [string]   input value
+#
+sub _myPrivateMethod {
+    my ($self, $param1) = @_;
+    ...
+}
+```
+
+---
+
+## 6. Validation and Linting
+Use `podchecker` to validate Pod syntax and catch errors.
+
+```bash
+podchecker yourfile.pod
+```
+✅ Check for missing blank lines, invalid commands, and unrecognized formatting codes.
+
+---
+
+## 7. Staying Consistent
+Following these Pod standards ensures your Perl documentation is clear, consistent, and easy to maintain. Always:
+- Use proper headings, lists, and formatting codes.
+- Embed documentation in modules and scripts.
+- Validate with `podchecker` to catch errors.
+
+
