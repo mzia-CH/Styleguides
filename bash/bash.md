@@ -145,6 +145,6 @@ with the **exception of using four spaces** (not two as
 - Follow existing style when modifying scripts to ensure uniformity.
 - **Be consistent across the codebase** to improve maintainability.
 - Use comments **only when necessary** to explain non-obvious code; avoid redundant or overly verbose comments.
-- Consider using logging functions instead of plain `echo` to standardize output handling.
+- Consider using logging functions instead of plain `echo` to standardise output handling.
 
 
