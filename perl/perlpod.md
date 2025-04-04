@@ -10,7 +10,7 @@ It is based on the [official perlpod docs](https://perldoc.perl.org/perlpod).
 - **Consistency:** Standard structure makes it easier to write and read.
 - **Integration:** Embed directly into Perl modules and scripts, keeping documentation close to the code.
 - **Portability:** `Pod`-formatted documentation can be transformed into multiple formats, making it easy to distribute.
-- **Standardization:** New developers familiar with Perl will already recognize `Pod` syntax, reducing the learning curve.
+- **Standardization:** New developers familiar with Perl will already recognise `Pod` syntax, reducing the learning curve.
 
 ---
 
@@ -27,7 +27,7 @@ Pod documents consist of three main paragraph types:
 Use the following commands to structure your documentation clearly and consistently:
 
 ### 2.3 **Headings**
-Use headings to organize the documentation hierarchy and improve readability.
+Use headings to organise the documentation hierarchy and improve readability.
 ```perl
 =head1 Main Title
 =head2 Subsection
@@ -225,7 +225,7 @@ Use `podchecker` to validate Pod syntax and catch errors.
 ```bash
 podchecker yourfile.pod
 ```
-✅ Check for missing blank lines, invalid commands, and unrecognized formatting codes.
+✅ Check for missing blank lines, invalid commands, and unrecognised formatting codes.
 
 ---
 
