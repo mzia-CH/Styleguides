@@ -70,3 +70,149 @@ resource "aws_security_group" "ssh" {
 - This prevents Terraform warnings and maintains consistency.
 
 ---
+
+## 7. Data Sources
+
+### 7.1 Usage
+- Use **data sources** to look up external data or resources defined in separate Terraform configurations.
+- Examples include:
+    - Data held in **HashiCorp Vault**
+    - Infrastructure resources like **subnet CIDRs** or **VPC IDs**
+
+### 7.2 Naming
+- Use **snake_case** for data source names:
+    - ✅ `my_data`
+    - ❌ `my-data`
+
+### 7.3 Remote State
+- **Avoid using Terraform Remote State** for data lookups.  
+- Review and remove any instances of:  
+   ```terraform
+   terraform_remote_state
+   ```
+
+---
+
+## 8. Variables
+
+### 8.1 Naming
+- Use **meaningful and contextual variable names**.  
+- Reflect the data being passed:
+    - ✅ `web_cidrs` → (list of CIDRs for web servers)  
+    - ❌ `my_subnet_cidrs` → (too vague)  
+
+- Use **plural names** for lists and singular names for single values:
+    - ✅ `server_ids` → List of server IDs  
+    - ✅ `db_password` → Single password string  
+
+### 8.2 Descriptions
+- Omit descriptions if the variable name is clear.  
+- Add descriptions for ambiguous or complex variables.
+
+### 8.3 Type Declaration
+- **Always specify the type** to prevent ambiguity and ensure robust code.
+
+### 8.4 Example
+```terraform
+variable "web_cidrs" {
+  type        = list(string)
+  description = "List of CIDR blocks for web access"
+}
+```
+
+---
+
+## 9. Value Assignment
+
+### 9.1 Methods
+- Assign variable values using:
+    - **Environment vars**
+    - **Defaults**
+    - **Locals blocks**
+
+### 9.2 Guidance
+
+#### 9.2.1 Defaults
+- Use default values when they apply across multiple environments.  
+- Avoid duplicating values across environments.
+
+#### 9.2.2 Environment Vars
+- Set environment-specific variables here.
+
+#### 9.2.3 Local Vars
+- Use `locals` to avoid repeating constants inside a module.
+- Group related local variables for readability.
+
+### 9.3 Example with Vault-Sourced Secrets
+```terraform
+locals {
+  internal_cidrs = values(data.vault_generic_secret.internal_cidrs.data)
+}
+```
+- Use `local.internal_cidrs` throughout the module instead of the full `data.vault_generic_secret...` path for clarity.
+
+---
+
+## 10. Security
+
+- **Never commit sensitive values** (e.g., passwords, secrets) to source control.  
+- Use tools like **HashiCorp Vault** or AWS Secrets Manager for secrets management.
+- Even infrastructure details (e.g., CIDRs) should be handled carefully, as repositories can become public.
+
+---
+
+## 11. Grouping Variables
+
+- Group related variables together under comments for readability.
+
+### 11.1 Example
+```terraform
+# DNS
+variable "zone_id" {
+  type        = string
+  description = "The ID of the DNS zone"
+}
+
+# EC2
+variable "ec2_instance_type" {
+  type        = string
+  description = "The instance type for EC2"
+}
+```
+
+---
+
+## 12. READMEs
+
+### 12.1 Documentation Standards
+- All scripts should include a **README** with:
+    - **Purpose** of the script
+    - List of variables with descriptions
+    - Example usage  
+
+### 12.2 Module-Specific Documentation
+- When using modules:
+    - Each module must include its own `README.md` for detailed documentation.  
+    - The **root README** should link to individual module READMEs.
+
+### 12.3 Example README Structure
+```markdown
+# VPC Provisioning
+
+## Overview
+This script provisions a VPC with public and private subnets.
+
+## Variables
+- `vpc_cidr`: The CIDR block for the VPC.
+- `public_subnet_cidrs`: List of public subnet CIDRs.
+- `private_subnet_cidrs`: List of private subnet CIDRs.
+
+## Usage
+```terraform
+module "vpc" {
+  source              = "./module-vpc"
+  vpc_cidr            = "10.0.0.0/16"
+  public_subnet_cidrs = ["10.0.1.0/24"]
+  private_subnet_cidrs = ["10.0.2.0/24"]
+}
+```
