@@ -63,13 +63,13 @@ Example:
 ```java
 switch (value) {
     case 1:
-        System.out.println("One");
+        doSomething();
         break;
     case 2:
-        System.out.println("Two");
+        doSomethingElse();
         break;
     default:
-        System.out.println("Other");
+        doSomeDefaultThing();
 }
 ```
 
