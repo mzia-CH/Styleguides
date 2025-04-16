@@ -61,7 +61,7 @@ Disqualifications []Disqualification `bson:"disqualifications" json:"disqualific
 - Use pointers when modifying a struct or to avoid unnecessary copying.
 - Use value receivers when the method does not modify the struct.
 - Avoid using pointer receivers for small structs unless modification is needed.
-- Use constructor functions for complex struct initialization.
+- Use constructor functions for complex struct initialisation.
 
 ```go
 type User struct {
@@ -91,7 +91,7 @@ func (u User) Name() string {
 - Always use braces `{}`.
 - Avoid unnecessary `else` if the `if` block returns.
 - Keep `if` statements short and readable.
-- Combine initialization with `if` when appropriate.
+- Combine initialisation with `if` when appropriate.
 
 ```go
 if err := doSomething(); err != nil {
@@ -205,10 +205,10 @@ defer func() {
 }()
 ```
 
-### Synchronization
+### Synchronisation
 - Use `sync.Mutex` or `sync.RWMutex` when protecting shared resources.
 - Use `sync.WaitGroup` to coordinate goroutines.
-- Consider `sync.Once` for initialization code that should only run once.
+- Consider `sync.Once` for initialisation code that should only run once.
 
 ```go
 var mu sync.Mutex
