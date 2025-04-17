@@ -4,7 +4,7 @@
 This document establishes the Perl coding standards for Companies House, based on *Perl Best Practices* (ISBN: 978-0-596-00173-5) by Damian Conway. Following these guidelines ensures consistency, maintainability and readability across all Perl projects. This guide will also cover best practices for documentation, debugging and performance optimisation to create high-quality, maintainable Perl applications.
 
 ## General Guidelines
-- Always use `strict` and `warnings`.
+- Always include `use strict;` and `use warnings;`
 - Prefer readability and maintainability over cleverness.
 - Use meaningful variable and function names that convey intent.
 - Keep functions short and focused on a single task.
