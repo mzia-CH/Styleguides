@@ -78,6 +78,20 @@ const StringUtil = {
     formatDate: function(date) { ... }
 };
 ```
+
+or
+```js
+const QueryHandling = {
+    REJECTED_IMAGE: "images/qha/rejected.png",
+    ACCEPTED_IMAGE: "images/qha/accepted.png", 
+    ERROR_FLAG_IMAGE: "images/qha/error_flag.png",
+    parseFieldId: function(id) {
+        // your parsing logic here
+    }
+};
+```
+
+
 - **Avoid Creating Global Variables Inside Methods**:
 ```js
 for (var i = 0; i < len; i++) { ... }
