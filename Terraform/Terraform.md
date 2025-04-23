@@ -198,7 +198,7 @@ variable "ec2_instance_type" {
     - The **root README** should link to individual module READMEs.
 
 ### 12.3 Example README Structure
-
+```terraform
 # VPC Provisioning
 
 ## Overview
@@ -211,7 +211,7 @@ This script provisions a Virtual Private Cloud (VPC) with public and private sub
 
 ## Usage
 Include this code in your **main Terraform configuration file** to call the module and provision the VPC:
-```terraform
+
 module "vpc" {
   source              = "./module-vpc"
   vpc_cidr            = "10.0.0.0/16"
