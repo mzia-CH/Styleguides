@@ -85,9 +85,7 @@ const QueryHandling = {
     REJECTED_IMAGE: "images/qha/rejected.png",
     ACCEPTED_IMAGE: "images/qha/accepted.png", 
     ERROR_FLAG_IMAGE: "images/qha/error_flag.png",
-    parseFieldId: function(id) {
-        // your parsing logic here
-    }
+    parseFieldId: function(id) { ... }
 };
 ```
 
