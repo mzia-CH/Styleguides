@@ -202,14 +202,15 @@ variable "ec2_instance_type" {
 # VPC Provisioning
 
 ## Overview
-This script provisions a VPC with public and private subnets.
+This script provisions a Virtual Private Cloud (VPC) with public and private subnets in AWS using Terraform.
 
 ## Variables
-- `vpc_cidr`: The CIDR block for the VPC.
-- `public_subnet_cidrs`: List of public subnet CIDRs.
-- `private_subnet_cidrs`: List of private subnet CIDRs.
+- `vpc_cidr`: The CIDR block for the VPC. Example: `"10.0.0.0/16"`
+- `public_subnet_cidrs`: List of CIDR blocks for the public subnets. Example: `["10.0.1.0/24"]`
+- `private_subnet_cidrs`: List of CIDR blocks for the private subnets. Example: `["10.0.2.0/24"]`
 
 ## Usage
+Include this code in your **main Terraform configuration file** to call the module and provision the VPC:
 ```terraform
 module "vpc" {
   source              = "./module-vpc"
@@ -218,3 +219,6 @@ module "vpc" {
   private_subnet_cidrs = ["10.0.2.0/24"]
 }
 ```
+
+
+
