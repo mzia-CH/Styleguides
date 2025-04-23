@@ -210,7 +210,7 @@ This script provisions a Virtual Private Cloud (VPC) with public and private sub
 - `private_subnet_cidrs`: List of CIDR blocks for the private subnets. Example: `["10.0.2.0/24"]`
 
 ## Usage
-Include this code in your **main Terraform configuration file** to call the module and provision the VPC:
+Include this code in your main Terraform configuration file to call the module and provision the VPC:
 
 module "vpc" {
   source              = "./module-vpc"
