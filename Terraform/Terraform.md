@@ -163,7 +163,7 @@ locals {
 
 ## 11. Grouping Variables
 
-- Group related variables together under comments for readability.
+- Group related variables together under comments for readability. Include their type, description and default value.
 
 ### 11.1 Example
 ```terraform
@@ -171,12 +171,14 @@ locals {
 variable "zone_id" {
   type        = string
   description = "The ID of the DNS zone"
+  default     = "Z1234567890ABC"
 }
 
 # EC2
 variable "ec2_instance_type" {
   type        = string
   description = "The instance type for EC2"
+  default     = "t2.micro" 
 }
 ```
 
