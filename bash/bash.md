@@ -40,8 +40,8 @@ with the **exception of using four spaces** (not two as
 - Ensure scripts can be executed from any location and do not rely on the current working directory.
   ```sh
   # Example of making a script location-independent
-  SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-  source ${SCRIPT_DIR}/common
+  SCRIPT_DIRECTORY="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+  source ${SCRIPT_DIRECTORY}/common
   ```
 
 ## Formatting
