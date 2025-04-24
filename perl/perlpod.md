@@ -10,7 +10,7 @@ It is based on the [official perlpod docs](https://perldoc.perl.org/perlpod).
 - **Consistency:** Standard structure makes it easier to write and read.
 - **Integration:** Embed directly into Perl modules and scripts, keeping documentation close to the code.
 - **Portability:** `Pod`-formatted documentation can be transformed into multiple formats, making it easy to distribute.
-- **Standardization:** New developers familiar with Perl will already recognise `Pod` syntax, reducing the learning curve.
+- **Standardisation:** New developers familiar with Perl will already recognise `Pod` syntax, reducing the learning curve.
 
 ---
 
