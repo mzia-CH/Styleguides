@@ -1,6 +1,6 @@
 # Bash Coding Standards
 
-This document outlines key practices for writing clean and efficient Bash code. 
+This document outlines key practices for writing clean and efficient Bash code.
 
 It is based on the [Google shell coding standard](https://google.github.io/styleguide/shell.xml)
 with the **exception of using four spaces** (not two as
@@ -13,7 +13,7 @@ with the **exception of using four spaces** (not two as
   ```sh
   # Example usage of set options
   set -euo pipefail
-  
+
   echo "This will exit on error, unset variable use, or pipeline failure."
   ```
 - **Avoid `eval`** due to security risks, as it can lead to command injection vulnerabilities.
@@ -43,6 +43,14 @@ with the **exception of using four spaces** (not two as
   SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
   source "${SCRIPT_DIR}/common.sh"
   ```
+
+  ### Additional Notes:
+  Defining a variable referencing the containing directory is essential for robust script invocation:
+  ```sh
+  SCRIPT_DIRECTORY="$( cd "$( dirname \"${BASH_SOURCE[0]}\" )" && pwd )"
+  source ${SCRIPT_DIRECTORY}/common
+  ```
+  This ensures the script functions correctly regardless of the current working directory.
 
 ## Formatting
 - **Indentation:** Use **four spaces per level** to maintain readability and consistency.
@@ -76,6 +84,18 @@ with the **exception of using four spaces** (not two as
   - **Arguments taken** with details.
   - **Outputs and return values**, if applicable.
 - Define all functions before they are used to ensure clarity.
+
+  ### Additional Notes:
+  Variable initialisation inside functions is not required prior to use in loops. For example:
+  ```sh
+  get_configuration () {
+      for definition in $(find ${PIPELINE_DEFINITIONS} -type f -name ${pipeline}); do
+          local configuration=${definition}
+      done
+
+      echo ${configuration}  # Still accessible here
+  }
+  ```
 
 ## Variables
 - **Use `local` for function-specific variables** to avoid unexpected behavior.
@@ -141,10 +161,21 @@ with the **exception of using four spaces** (not two as
 - Ensure error messages are sent to `STDERR` for proper logging and debugging.
 - **Use meaningful exit codes** (`exit 1` for general errors, `exit 2` for missing files, etc.).
 
+  ### Additional Notes:
+  The preferred way to print new lines with echo is to use:
+  ```sh
+  echo -e 'Comment\n'
+  ```
+  Instead of using a blank `echo` call:
+  ```sh
+  echo 'Comment'
+  echo
+  ```
+  This avoids unnecessary output inconsistencies.
+
 ## Consistency & Readability
 - Follow existing style when modifying scripts to ensure uniformity.
 - **Be consistent across the codebase** to improve maintainability.
 - Use comments **only when necessary** to explain non-obvious code; avoid redundant or overly verbose comments.
 - Consider using logging functions instead of plain `echo` to standardise output handling.
-
 
