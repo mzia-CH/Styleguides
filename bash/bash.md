@@ -44,13 +44,6 @@ with the **exception of using four spaces** (not two as
   source "${SCRIPT_DIR}/common.sh"
   ```
 
-- Defining a variable referencing the containing directory is essential for robust script invocation:
-  ```sh
-  SCRIPT_DIRECTORY="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-  source "${SCRIPT_DIRECTORY}/common"
-  ```
-  This ensures the script functions correctly regardless of the current working directory.
-
 ## Formatting
 - **Indentation:** Use **four spaces per level** to maintain readability and consistency.
 - **Line length:** Keep lines **under 80 characters** where possible; wrap long commands using `\` for clarity.
