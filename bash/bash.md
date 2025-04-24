@@ -47,7 +47,7 @@ with the **exception of using four spaces** (not two as
 - Defining a variable referencing the containing directory is essential for robust script invocation:
   ```sh
   SCRIPT_DIRECTORY="$( cd "$( dirname \"${BASH_SOURCE[0]}\" )" && pwd )"
-  source ${SCRIPT_DIRECTORY}/common
+  source "${SCRIPT_DIRECTORY}/common"
   ```
   This ensures the script functions correctly regardless of the current working directory.
 
@@ -88,6 +88,9 @@ with the **exception of using four spaces** (not two as
 - Variable initialisation inside functions is not required prior to use in loops. For example:
   ```sh
   get_configuration () {
+      # This initialisation is not required
+      configuration=""
+  
       for definition in $(find ${PIPELINE_DEFINITIONS} -type f -name ${pipeline}); do
           local configuration=${definition}
       done
