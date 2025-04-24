@@ -73,7 +73,7 @@ with the **exception of using four spaces** (not two as
   ```sh
   # Example function with local variable
   my_function() {
-      local name="John"
+      local name="Mark"
       echo "Hello, $name!"
   }
   ```
