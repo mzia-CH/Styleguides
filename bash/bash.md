@@ -44,8 +44,7 @@ with the **exception of using four spaces** (not two as
   source "${SCRIPT_DIR}/common.sh"
   ```
 
-  ### Additional Notes:
-  Defining a variable referencing the containing directory is essential for robust script invocation:
+- Defining a variable referencing the containing directory is essential for robust script invocation:
   ```sh
   SCRIPT_DIRECTORY="$( cd "$( dirname \"${BASH_SOURCE[0]}\" )" && pwd )"
   source ${SCRIPT_DIRECTORY}/common
@@ -85,8 +84,8 @@ with the **exception of using four spaces** (not two as
   - **Outputs and return values**, if applicable.
 - Define all functions before they are used to ensure clarity.
 
-  ### Additional Notes:
-  Variable initialisation inside functions is not required prior to use in loops. For example:
+
+- Variable initialisation inside functions is not required prior to use in loops. For example:
   ```sh
   get_configuration () {
       for definition in $(find ${PIPELINE_DEFINITIONS} -type f -name ${pipeline}); do
@@ -161,12 +160,12 @@ with the **exception of using four spaces** (not two as
 - Ensure error messages are sent to `STDERR` for proper logging and debugging.
 - **Use meaningful exit codes** (`exit 1` for general errors, `exit 2` for missing files, etc.).
 
-  ### Additional Notes:
-  The preferred way to print new lines with echo is to use:
+
+- ✅ The preferred way to print new lines with echo is to use:
   ```sh
   echo -e 'Comment\n'
   ```
-  Instead of using a blank `echo` call:
+  ❌ Instead of using a blank `echo` call:
   ```sh
   echo 'Comment'
   echo
