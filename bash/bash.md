@@ -46,7 +46,7 @@ with the **exception of using four spaces** (not two as
 
 - Defining a variable referencing the containing directory is essential for robust script invocation:
   ```sh
-  SCRIPT_DIRECTORY="$( cd "$( dirname \"${BASH_SOURCE[0]}\" )" && pwd )"
+  SCRIPT_DIRECTORY="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
   source "${SCRIPT_DIRECTORY}/common"
   ```
   This ensures the script functions correctly regardless of the current working directory.
