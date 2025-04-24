@@ -27,18 +27,18 @@ This document outlines key practices for writing clean, efficient and idiomatic 
 
 ```go
 if err != nil {
-    // error handling
-    return // or continue, etc.
+    return fmt.Errorf("failed to process request: %w", err)
 }
-// normal code
 ```
 
 **Interfaces**
 - Define interfaces in the package that uses them, not the one that implements them.
 - Don't define interfaces prematurely; wait for concrete use cases.
+- Define small, focused interfaces instead of large ones when possible.
 
 **Goroutines**
 - Ensure clear goroutine lifetimes to prevent leaks and race conditions.
+- Use `context` for cancellation and `sync.WaitGroup` for synchronisation.
 - Document when and why goroutines exit if it's not obvious.
 
 ### Best Practices
@@ -49,9 +49,11 @@ if err != nil {
 
 **Slices**
 - Prefer `var t []string` over `t := []string{}` for empty slices.
+- When possible, preallocate slices to avoid unnecessary reallocations.
 
 **Crypto**
 - Use `crypto/rand` for generating keys, not `math/rand`.
+- `math/rand` is not cryptographically secure and should never be used for security-sensitive tasks.
 
 **Testing**
 - Include examples in new packages to demonstrate usage.
@@ -63,6 +65,7 @@ if err != nil {
 - Avoid renaming imports except to prevent name collisions.
 - Don't use `import .` except in specific test scenarios.
 - Avoid copying structs from other packages to prevent unexpected aliasing.
+- Avoid global variables and mutable state, as they make code harder to test.
 
 ### Additional Topics
 
@@ -72,6 +75,7 @@ if err != nil {
 **Package Comments**
 - Add a package comment for each package, placed before the package clause.
 - For "main" packages, the comment should describe the program's purpose.
+- Document exported functions and methods using full sentences, describing their behavior and purpose.
 
 **Package Names**
 - Choose package names that are concise, clear and avoid redundancy.
