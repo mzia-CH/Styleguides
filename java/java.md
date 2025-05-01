@@ -181,6 +181,6 @@ Predicate<String> predicate = str ->
 
 ## 8. CHIPS Specific Guidance
 
-[CHIPS development](chips_development.md).
+[CHIPS development](chips_development.md)
 
 
