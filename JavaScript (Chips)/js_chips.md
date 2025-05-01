@@ -102,8 +102,8 @@ Using `var` ensures `i` remains local to the loop.
 const myPage = {
     oldHandleBodyLoad: page.handleBodyLoad,
     handleBodyLoad: function(event) {
-        if (this.oldHandleBodyLoad) {
-            this.oldHandleBodyLoad(event);
+        if (oldHandleBodyLoad) {
+            oldHandleBodyLoad(event);
         }
         // Page-specific logic
     }
